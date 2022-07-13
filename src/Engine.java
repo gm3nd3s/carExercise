@@ -14,7 +14,7 @@ public class Engine {
     }
 
     public  boolean canItRun (int fuel){
-        if((fuelLevel - fuel < 0)){
+        if((fuelLevel - (fuel / 15)< 0)){
             return true;
         }
         return false;
@@ -24,7 +24,7 @@ public class Engine {
         if (canItRun(fuel)) {
             return 0;
         }
-        fuelLevel -= fuel;
+        fuelLevel -= fuel/15;
         return fuel * range;
     }
 

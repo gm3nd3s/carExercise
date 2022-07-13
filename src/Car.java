@@ -36,7 +36,7 @@ public class Car {
 
     private boolean wornTyres(int distance) {
         for (Tire tire: tires) {
-            if(!tire.tireTear(distance/10)){
+            if(!tire.tireTear(distance/80)){
                 radio.play();
                 return false;
             }
